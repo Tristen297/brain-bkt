@@ -44,7 +44,7 @@
 .parallax-section {
     position: relative;
     background-image: url('../images-and-icons/man-hands-working.jpg');
-    height: 80vh;
+    height: 70vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -159,4 +159,144 @@
     background: linear-gradient(to bottom, #f7f7f7, #e1e1e1); /* Light gradient background */
     background-size: cover;
 }
+
+.our-work-parallax {
+    position: relative;
+    background-image: url('../images-and-icons/car-wrap-application-2.jpg');
+    height: 70vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Ensures overlay doesn't go outside of the section */
+}
+
+
+.our-work-parallax-text h2 {
+    font-size: 6rem;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block; /* Ensures the underline is just below the text */
+    color: white; /* Adjust to match your design */
+}
+
+.our-work-parallax-text h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Adjust to position the line slightly below the text */
+    width: 100%;
+    height: 6px; /* Adjust thickness of the line */
+    background-color: #632B8E; /* Use a color that matches your design */
+    border-radius: 2px; /* Optional: round the edges of the line */
+}
+
+/*below is css for the carousel section*/
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.carousel-items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    flex: 1 0 25%; /* Each item takes up 25% of the row */
+    margin: 0 5px; /* Space between items */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 600px; /* Adjusted height to ensure images look good fullscreen */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.05);
+}
+
+.carousel-button {
+    background-color: #632B8E;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    font-size: 1.25rem; /* Larger font size */
+    border-radius: 10px; /* Optional: add border radius for rounded buttons */
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: #B0CC39;
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        flex: 1 0 100%; /* Each item takes up 100% of the row */
+        margin: 0; /* No margin between items */
+    }
+
+    .carousel-item img {
+        height: auto; /* Adjust height to maintain aspect ratio */
+    }
+
+    .carousel-container {
+        justify-content: center; /* Center the single image */
+    }
+
+    .carousel-button {
+        padding: 10px 20px; /* Smaller padding for smaller buttons */
+        font-size: 1rem; /* Smaller font size */
+    }
+
+    .prev-button {
+        left: 10px; /* Adjust positioning if needed */
+    }
+
+    .next-button {
+        right: 10px; /* Adjust positioning if needed */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
