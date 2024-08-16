@@ -1,0 +1,162 @@
+/*below is css for the hero*/
+
+.hero-wrapper {
+    width: 100%;
+}
+
+.Hero-content {
+    background-color: white;
+    height: 90vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #333; /* Dark text color for contrast against white background */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.Hero-text {
+    font-size: 3rem; /* Adjust font size for full-screen effect */
+    font-weight: bold;
+    line-height: 1.2;
+    max-width: 1500px;
+    margin-bottom: 20px;
+}
+
+.hero-link {
+    font-size: 1.5rem; /* Adjust link size for full-screen effect */
+    color: #fff;
+    background-color: #632B8E;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-link:hover {
+    background-color: #B0CC39;
+}
+
+/*below is css for the first parallax section*/
+
+.parallax-section {
+    position: relative;
+    background-image: url('../images-and-icons/man-hands-working.jpg');
+    height: 80vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Ensures overlay doesn't go outside of the section */
+}
+
+.parallax-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust the opacity (0.3) to control the tint level */
+    z-index: 0; 
+}
+
+.parallax-text h2 {
+    font-size: 6rem;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block; /* Ensures the underline is just below the text */
+    color: white; /* Adjust to match your design */
+}
+
+.parallax-text h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Adjust to position the line slightly below the text */
+    width: 100%;
+    height: 6px; /* Adjust thickness of the line */
+    background-color: #632B8E; /* Use a color that matches your design */
+    border-radius: 2px; /* Optional: round the edges of the line */
+}
+
+/*below is css for the services box section*/
+
+.service-bar {
+    display: flex;
+    align-items: center;
+    height: 200px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    width: 95%; /* Set the width to 80% of the parent container's width */
+    box-sizing: border-box; /* Ensures padding and borders are included in the width */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.service-bar:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.service-bar:hover .service-image {
+    transform: scale(1.05); /* Zoom in on the image slightly on hover */
+}
+
+.service-image {
+    width: 75%; /* The image now takes up 75% of the service bar */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 15px 0 0 15px;
+    transition: transform 0.3s ease; /* Smooth image zoom on hover */
+}
+
+.service-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 40%; /* The gradient covers the last 25% of the image */
+    background: linear-gradient(to right, transparent, #632B8E);
+    z-index: 1;
+}
+
+.service-text {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    z-index: 2;
+    color: white;
+    text-align: right;
+    font-size: 2rem; /* Slightly larger and more impactful font size */
+    font-family: 'Roboto', sans-serif; /* Example of a modern font */
+    font-weight: 500;
+    letter-spacing: 1px; /* Slightly increase letter spacing for readability */
+    background-color: #632B8E;
+    border-radius: 0 15px 15px 0;
+}
+
+
+.home-services-content {
+    padding: 50px 0;
+    background: linear-gradient(to bottom, #f7f7f7, #e1e1e1); /* Light gradient background */
+    background-size: cover;
+}
+
